@@ -13,7 +13,7 @@
 <body>
     <!-- Let's go Semantic! or What do you think -->
     <header>
-        <nav class="container">            
+        <nav class="menu-container">            
             <a class="menu-icon" href="#"><i class="material-icons">
                 menu
                 </i></a>
@@ -24,15 +24,20 @@
     </header>
     <main>
         <section>
-            <ul class="maybe flex or grid">
+            <!-- Where the radio player is included -->
+            <audio controls>
+                    <source src="myAudio.mp3" type="audio/mp3">
+                    <source src="myAudio.ogg" type="audio/ogg">
+                    <p>Your browser doesn't support HTML5 audio. Here is
+                       a <a href="myAudio.mp4">link to the audio</a> instead.</p>
+                  </audio>
+        </section>
+        <section>
+            <ul class="station-container">
                 <li>Radio 1</li>
                 <li>Radio 2</li>
                 <li>Radio 3</li>
                 <li>Radio 4</li>
-            </ul>
-        </section>
-        <section>
-            <ul class="maybe flex or grid">
                 <li>Radio 5</li>
                 <li>Radio 6</li>
                 <li>Radio 7</li>

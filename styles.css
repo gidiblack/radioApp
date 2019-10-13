@@ -1,4 +1,9 @@
 /* This is built with pure css  */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/* Default styles for the body  */
 body{
     background-image: url(/images/radioFemale.jpg);
     background-color: #191101;
@@ -6,9 +11,15 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: 0;
 }
-.container{
+
+/* Decorating all list elements  */
+ul {
+    list-style-type: none;
+   }
+
+/* MENU container // navigation bar  */
+.menu-container{
     display: grid;
     background-color: #202124;
     grid-template-columns: 50px auto;
@@ -23,4 +34,18 @@ nav a{
 }
 .material-icons{
     font-size: 24px;
+}
+
+audio{
+    background-color: rgba(26,26,26,.8);
+    display: inline;
+}
+
+/* Styling for radio stations card or grid */
+.station-container{
+    background-color: rgba(26,26,26,.8);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    color: white;
 }

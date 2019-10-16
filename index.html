@@ -4,47 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Cabin+Sketch:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>RadioApp</title>
 </head>
 <body>
-    <!-- Let's go Semantic! or What do you think -->
     <header>
-        <nav class="menu-container">            
-            <a class="menu-icon" href="#"><i class="material-icons">
-                menu
-                </i></a>
-            <a id="logo" href="#"><i class="material-icons">
-                    radio
-                    </i> radioAppName</a>
-        </nav>
+        <div class="wrapper"> 
+            <nav>  
+                <ul class="main-nav">
+                    <li><a href="#" class="nav-links logo">RadioApp</a></li>
+                    <li><a href="#" class="nav-links">home</a></li>
+                    <li><a href="#" class="nav-links">about us</a></li>
+                    <li><a href="#" class="nav-links">contact</a></li>
+                </ul>   
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <!-- Where the radio player is included -->
-            <audio controls>
-                    <source src="myAudio.mp3" type="audio/mp3">
-                    <source src="myAudio.ogg" type="audio/ogg">
-                    <p>Your browser doesn't support HTML5 audio. Here is
-                       a <a href="myAudio.mp4">link to the audio</a> instead.</p>
-                  </audio>
-        </section>
-        <section>
-            <ul class="station-container">
-                <li>Radio 1</li>
-                <li>Radio 2</li>
-                <li>Radio 3</li>
-                <li>Radio 4</li>
-                <li>Radio 5</li>
-                <li>Radio 6</li>
-                <li>Radio 7</li>
-                <li>Radio 8</li>
-            </ul>
-        </section>
-    </main>
-    <footer></footer>
+
+    <!-- Music Player -->
+    <section id="player-section">
+        <div class="wrapper">
+            <div class="player">
+                <div class="now-playing"></div>
+                <div class="player-controls">
+                    <div class="prev"></div>
+                    <div class="play"></div>
+                    <div class="pause"></div>
+                    <div class="next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stations section  -->
+    <section id="station-section">
+        <div class="wrapper">
+            <h2>Radio Stations</h2>
+            <div class="flexbox">
+                <div class="card station-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Station name</h3>
+                    </div>
+                </div>
+                <div class="card station-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Station name</h3>
+                    </div>
+                </div>
+                <div class="card station-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Station name</h3>
+                    </div>
+                </div>
+                <div class="card station-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Station name</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playlists Section -->
+    <section id="playlist-section">
+        <div class="wrapper">
+            <h2>Playlists</h2>
+            <div class="flexbox">
+                <div class="card playlist-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Playlist name</h3>
+                    </div>
+                </div>
+                <div class="card playlist-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Playlist name</h3>
+                    </div>
+                </div>
+                <div class="card playlist-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Playlist name</h3>
+                    </div>
+                </div>
+                <div class="card playlist-card">
+                    <img src="images/album-cover.jpg" alt="avatar">
+                    <div class="card-info">
+                        <h3>Playlist name</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer --> 
+<footer>
+    <div class="wrapper">
+        <p>Developed by <a href="#">techSolutionDrive</a></p>
+        <span>Copyright &copy; 2019</span>
+    </div>
+</footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

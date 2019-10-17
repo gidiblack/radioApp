@@ -9,7 +9,8 @@ body{
 }
 
 header {
-    background: #612958;
+    /* background: #612958; */
+    background: #924987;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -43,10 +44,16 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 800;
+    position: relative;
+}
+
+.nav-links:hover{
+    color: #B0C4DD;
+    border-color: #fff;
 }
 .logo{
     font-family: "Cabin Sketch", cursive;
-    font-size: 32px;
+    font-size: 40px;
 }
 
 /* Player Controls */
@@ -56,7 +63,7 @@ header {
 .player {
     position: relative;
     display: flex;
-    /* background-color: #fff; */
+    background-color: #fff;
     border-radius: 5px;
     width: 400px;
     height: 100px;
@@ -77,6 +84,8 @@ header {
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
+    padding: 0;
+    list-style: none;
 }
 
 .prev, 
@@ -131,10 +140,12 @@ header {
     height: 200px;
     border-radius: 5px;
     margin: 10px;
+    background: oldlace;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .card img {
@@ -160,10 +171,13 @@ header {
 }
 
 section {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 section h2{
     margin: 5px 0;
+    font-family: "Cabin Sketch", cursive;
+    color: #fff;
+    font-size: 32px;
 }
 /* Station & Playlist Section */
 
@@ -171,7 +185,7 @@ section h2{
 /* Footer */
 footer{
     text-align: center;
-    background: #726E72;
+    background: #924987;
     color: white;
     height: 60px;
     padding: 10px 0;

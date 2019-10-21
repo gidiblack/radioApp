@@ -12,6 +12,7 @@ header {
     /* background: #612958; */
     background: #924987;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 .wrapper {
@@ -22,39 +23,87 @@ header {
 
 /* Navigation */
 
-.main-nav {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    height: 60px;
-    align-items: center;
-}
 
-.main-nav li {
-    list-style: none;
-}
-.main-nav li:first-child {
-    margin-right: auto;
-}
-.main-nav .nav-links {
-    color: white;
-    display: block;
-    border-radius: 4px;
-    padding: 10px 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 800;
-    position: relative;
-}
-
-.nav-links:hover{
-    color: #B0C4DD;
-    border-color: #fff;
-}
 .logo{
     font-family: "Cabin Sketch", cursive;
-    font-size: 40px;
+    font-size: 48px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
 }
+/* CSS hamburger menu */
+.menu-toggle { 
+    padding: 1em;
+    position: absolute;
+    top: 10px;
+    left: 1em;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+    content: "";
+    display: block;
+    background: #ffffff;
+    height: 3px;
+    width: 2.2rem;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+.hamburger::before {
+    transform: translateY(-8px);
+}
+.hamburger::after {
+    transform: translateY(5px); 
+}
+
+/* X button with CSS */
+.close-menu .hamburger {
+    transform: rotate(45deg);
+}
+.close-menu .hamburger::after{
+    transform: translateY(-3px) rotate(-90deg);
+}
+.close-menu .hamburger::before{
+    opacity: 0;
+}
+
+/* Menu on-click */
+.menu-open {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 4;
+    transition: all ease-in-out 1500ms;
+    -webkit-transition: all ease-in-out 1500ms;
+}
+
+.main-nav {
+    display: inline-block;
+    width: 45%;
+    height: 800px;
+    background: #0b0a0a;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.nav-links {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: #323030;
+    padding: 20px;
+    margin: 8px 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+.nav-links:hover{
+    background: #211f1f;
+}
+
 
 /* Player Controls */
 #player-section{
@@ -67,7 +116,7 @@ header {
     border-radius: 5px;
     width: 400px;
     height: 100px;
-    z-index: 5;
+    z-index: 2;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
     margin: 20px auto;
     padding: 8px;

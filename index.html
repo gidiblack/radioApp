@@ -9,17 +9,19 @@
     <title>RadioApp</title>
 </head>
 <body>
-    <header>
-        <div class="wrapper"> 
-            <nav>  
-                <ul class="main-nav">
-                    <li><a href="#" class="nav-links logo">RadioApp</a></li>
-                    <li><a href="#" class="nav-links">home</a></li>
-                    <li><a href="#" class="nav-links">about us</a></li>
-                    <li><a href="#" class="nav-links">contact</a></li>
-                </ul>   
-            </nav>
+    <div class="menu-open"> 
+        <div class="main-nav">
+            <a href="#" class="nav-links">home</a>         
+            <a href="#" class="nav-links">about us</a>     
+            <a href="#"class="nav-links">contact</a>
         </div>
+    </div>
+    <header>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+
+        <a href="#" class="logo">RadioApp</a>
     </header>
 
     <!-- Music Player -->
@@ -110,7 +112,7 @@
         <span>Copyright &copy; 2019</span>
     </div>
 </footer>
-
+    <script src="vendors/jquery.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -6,7 +6,10 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Cabin", sans-serif;
+    letter-spacing: 1px;
 }
+
+/* Header & Navigation */
 
 header {
     /* background: #612958; */
@@ -20,9 +23,6 @@ header {
     max-width: 1100px;
     margin: 0 auto;
 }
-
-/* Navigation */
-
 
 .logo{
     font-family: "Cabin Sketch", cursive;
@@ -87,6 +87,7 @@ header {
     background: #0b0a0a;
     margin: 0;
     padding: 50px 20px;
+    letter-spacing: 1.3px;
 }
 
 .nav-links {
@@ -109,12 +110,12 @@ header {
 #player-section{
     text-align: center;
 }
-.player {
+#player {
     position: relative;
     display: flex;
     background-color: #fff;
     border-radius: 5px;
-    width: 400px;
+    width: 580px;
     height: 100px;
     z-index: 2;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
@@ -122,14 +123,14 @@ header {
     padding: 8px;
 }
 
-.now-playing{
+#np-image {
     display: block;
     background-image: url(images/random-cover.jpg);
     background-size: cover;
-    width: 90px;
+    width: 100px;
 }
 
-.player-controls {
+#player-controls {
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
@@ -137,12 +138,13 @@ header {
     list-style: none;
 }
 
-.prev, 
-.play,
-.pause, 
-.next {
-    width: 80px;
-    height: 80px;
+#prev, 
+#play,
+#pause, 
+#next,
+#vol-btn {
+    width: 70px;
+    height: 70px;
     border-radius: 5px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -152,39 +154,66 @@ header {
     -webkit-transition: background-image .3s ease;
 }
 
-.play:hover,
-.pause:hover {
+#play:hover,
+#pause:hover {
     transition: background-size .3s ease;
     -webkit-transition: background-size .3s ease;
     background-size: 65px;
 }
-.prev:hover, 
-.next:hover {
+#prev:hover, 
+#next:hover {
     transition: background-size .3s ease;
     -webkit-transition: background-size .3s ease;
     background-size: 55px;
 }
-.prev {
+#prev {
     background-image: url(images/skip-back-icon.png);
     background-size: 50px;
 }
-.play {
+#play {
     background-image: url(images/play-icon.png);
     background-size: 60px;
 }
-.pause {
+#pause {
     background-image: url(images/pause-icon.png);
     background-size: 60px;
     display: none;
 }
-.next{
+#next{
     background-image: url(images/skip-forward-icon.png);
     background-size: 50px;
 }
+
+#volume-controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#vol-btn {
+    background-image: url(images/volume-icon.png);
+    background-size: 40px;
+    margin: auto 0;
+}
+#vol-btn:hover{
+    background-size: 45px;
+    transition: background-size .3s ease;
+    -webkit-transition: background-size .3s ease;
+}
+input#volume {
+    cursor: pointer;
+}
+input#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    background: red;
+}
+
 /* Cards */
 .card {
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
-    transition: 0.3s;
+    transition: 0.5s;
     width: 180px;
     height: 200px;
     border-radius: 5px;
@@ -193,7 +222,7 @@ header {
 }
 
 .card:hover {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 

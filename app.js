@@ -1,11 +1,3 @@
-$(document).ready(function(){
-    //Using jQuery to toggle the navigation menu
-
-    $(".menu-toggle").click(function(){
-        $(".menu-open").toggle(200);
-        $(this).toggleClass("close-menu");
-    })
-});
 
 // getting player controls
 let playTrack, pauseTrack, prevTrack, nextTrack, volume, mute, vol;

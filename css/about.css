@@ -1,0 +1,28 @@
+body {
+    background: #dad4d4;
+}
+
+.about-us{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.about-us .aside-img {
+    width: 100%;
+    max-width: 500px;
+
+}
+.about-us .text-area {
+    width: 45%;
+}
+
+/* Contact Page */
+.error-message img {
+    width: 660px;
+}
+
+.error-message {
+    text-align: center;
+}

@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Cabin+Sketch:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>RadioApp</title>
 </head>
 <body>
     <div class="menu-open"> 
         <div class="main-nav">
-            <a href="#" class="nav-links">home</a>         
-            <a href="#" class="nav-links">about us</a>     
-            <a href="#"class="nav-links">contact</a>
+            <a href="index.html" class="nav-links">home</a>         
+            <a href="about-us.html" class="nav-links">about us</a>     
+            <a href="contact.html"class="nav-links">contact</a>
         </div>
     </div>
     <header>
@@ -21,7 +21,7 @@
             <div class="hamburger"></div>
         </div>
 
-        <a href="#" class="logo">RadioApp</a>
+        <a href="index.html" class="logo">RadioApp</a>
     </header>
 
     <!-- Music Player -->
@@ -112,11 +112,21 @@
     <!-- Footer --> 
 <footer>
     <div class="wrapper">
-        <p>Developed by <a href="#">techSolutionDrive</a></p>
+        <p>Developed by <a href="about-us.html">techSolutionDrive</a></p>
         <span>Copyright &copy; 2019</span>
     </div>
 </footer>
     <script src="vendors/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script>
+    $(document).ready(function(){
+        //Using jQuery to toggle the navigation menu
+
+        $(".menu-toggle").click(function(){
+            $(".menu-open").toggle(200);
+            $(this).toggleClass("close-menu");
+        })
+    });
+    </script>
 </body>
 </html>

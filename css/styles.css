@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(images/headphonesbgo.png);
+    background-image: url(../images/headphonesbgo.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -135,7 +135,7 @@ header {
 
 #np-image {
     display: block;
-    background-image: url(images/random-cover.jpg);
+    background-image: url(../images/random-cover.jpg);
     background-size: cover;
     width: 100px;
 }
@@ -177,20 +177,20 @@ header {
     background-size: 55px;
 }
 #prev {
-    background-image: url(images/skip-back-icon.png);
+    background-image: url(../images/skip-back-icon.png);
     background-size: 50px;
 }
 #play {
-    background-image: url(images/play-icon.png);
+    background-image: url(../images/play-icon.png);
     background-size: 60px;
 }
 #pause {
-    background-image: url(images/pause-icon.png);
+    background-image: url(../images/pause-icon.png);
     background-size: 60px;
     display: none;
 }
 #next{
-    background-image: url(images/skip-forward-icon.png);
+    background-image: url(../images/skip-forward-icon.png);
     background-size: 50px;
 }
 
@@ -200,7 +200,7 @@ header {
 }
 
 #vol-btn {
-    background-image: url(images/volume-icon.png);
+    background-image: url(../images/volume-icon.png);
     background-size: 40px;
     margin: auto 0;
 }

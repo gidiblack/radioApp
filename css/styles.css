@@ -138,6 +138,7 @@ header {
     background-image: url(../images/random-cover.jpg);
     background-size: cover;
     width: 100px;
+    transition: ease-in-out 500ms;
 }
 
 #player-controls {

@@ -13,16 +13,15 @@ vol = 0;
 let audioTrack = new Audio();
 let i = 0;
 let playlist = [
-    "audio/Childish Gambino - Feels Like Summer.mp3",
     "audio/Jim Croce - Time in a bottle.mp3",
-    "audio/Seal - Kiss From A Rose.mp3"
+    "audio/Seal - Kiss From A Rose.mp3",
+    "audio/Childish Gambino - Feels Like Summer.mp3"
 ];
 audioTrack.src = playlist[0];
 
 //Looping thru loaded songs when last file plays
 audioTrack.addEventListener('ended', function(){
     i = ++i < playlist.length ? i : 0;
-    console.log(i);
     audioTrack.src = playlist[i];
     audioTrack.play();
 });
@@ -30,7 +29,6 @@ audioTrack.addEventListener('ended', function(){
 // Next track function
 function skipTrack(){
     i = ++i < playlist.length ? i : 0;
-    console.log(i);
     audioTrack.src = playlist[i];
     playOrPauseTrack();
 }
@@ -39,10 +37,8 @@ function skipTrack(){
 function previousTrack(){
     if(i > 0){
         --i;
-        console.log(i);
         audioTrack.src = playlist[i];
     }else if(i == 0){
-        console.log(i);
         audioTrack.src = playlist[i];
     }
     playOrPauseTrack();
@@ -87,3 +83,20 @@ mute.addEventListener("click", function(){
         mute.style.backgroundImage = "url(images/volume-icon.png)";
     }
 });
+
+// Playlist starts over and now playing image changes
+let stationCards = document.getElementsByClassName("card-img");
+let nowPlaying = document.getElementById("np-image")
+
+for (let i = 0; i < stationCards.length; i++){
+    let button = stationCards[i]
+    button.addEventListener("click", stationCardClicked)
+}
+
+function stationCardClicked(event){
+    let button = event.target
+    var coverImage = button.src
+    nowPlaying.style.backgroundImage = "url(" + coverImage + ")"
+    audioTrack.src = playlist[0]
+    playOrPauseTrack()
+}

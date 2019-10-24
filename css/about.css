@@ -12,7 +12,7 @@ body {
 .about-us .aside-img {
     width: 100%;
     max-width: 500px;
-
+    margin: 10px 0;
 }
 .about-us .text-area {
     width: 45%;
@@ -20,9 +20,22 @@ body {
 
 /* Contact Page */
 .error-message img {
-    width: 660px;
+    width: 95%;
+    max-width: 660px;
 }
 
 .error-message {
     text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 500px){
+    .about-us {
+        display: block;
+        text-align: center;
+    }
+    .about-us .text-area {
+        width: 90%;
+        margin: 0 auto;
+    }
 }

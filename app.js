@@ -32,7 +32,7 @@ function skipTrack(){
     i = ++i < playlist.length ? i : 0;
     console.log(i);
     audioTrack.src = playlist[i];
-    audioTrack.play();
+    playOrPauseTrack();
 }
 
 // Previous track function
@@ -45,7 +45,8 @@ function previousTrack(){
         console.log(i);
         audioTrack.src = playlist[i];
     }
-    audioTrack.play();
+    playOrPauseTrack();
+    
 }
 
 // Play/pause function
@@ -59,7 +60,6 @@ let playOrPauseTrack = function(){
         pauseTrack.style.display = "none";
         playTrack.style.display = "block";
     }
-    console.log('play or pause clicked');
 };
 
 // Click event listeners 

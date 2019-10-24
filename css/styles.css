@@ -23,7 +23,7 @@ header {
 }
 
 .wrapper {
-    width: 100%;
+    width: 95%;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -223,17 +223,17 @@ input#volume::-webkit-slider-thumb {
 
 /* Cards */
 .card {
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
     transition: 0.5s;
     width: 180px;
     height: 200px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 16px;
     background: oldlace;
 }
 
 .card:hover {
-    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.7);
     cursor: pointer;
 }
 
@@ -256,9 +256,10 @@ input#volume::-webkit-slider-thumb {
 .flexbox {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
+/* Station & Playlist Sections */
 section {
     margin: 20px 0;
 }
@@ -268,8 +269,6 @@ section h2{
     color: #fff;
     font-size: 32px;
 }
-/* Station & Playlist Section */
-
 
 /* Footer */
 footer{
@@ -286,4 +285,36 @@ footer a {
 
 footer p {
     margin: 8px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px){
+    .logo {
+        font-size: 36px;
+    }
+    .main-nav {
+        width: 70%;
+    }
+    #player {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #volume-controls {
+        display: none;
+    }
+    #player {
+        width: 100%;
+    }
+    .card {
+        width: 140px;
+        height: 160px;
+    }
+    .card-info h3 {
+        font-size: 12px;
+    }
+    section h2 {
+        font-size: 28px;
+    }
 }

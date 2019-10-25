@@ -317,4 +317,7 @@ footer p {
     section h2 {
         font-size: 28px;
     }
+    .menu-toggle {
+        padding: .5rem;
+    }
 }
